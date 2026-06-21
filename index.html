@@ -1,0 +1,649 @@
+<!-- 2110bffc85dbb09e -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Colégio SEG – Site Oficial do Colégio SEG · Corevitalityy</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --primary: #1B3A5C;
+      --primary-light: #2A5A8C;
+      --accent: #E8833A;
+      --accent-light: #F09A5A;
+      --bg: #FAFAF8;
+      --bg-alt: #F0F4F8;
+      --text: #2D3748;
+      --text-light: #718096;
+      --white: #FFFFFF;
+      --shadow: 0 4px 24px rgba(27,58,92,0.08);
+      --radius: 12px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img { max-width: 100%; height: auto; display: block; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+
+    .ucz4_container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+
+    /* ── HEADER ── */
+    header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: var(--white);
+      box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+      transition: background 0.3s;
+    }
+    .ucz4_header-top {
+      background: var(--primary);
+      color: var(--white);
+      font-size: 0.82rem;
+      padding: 6px 0;
+    }
+    .ucz4_header-top .ucz4_container {
+      display: flex; justify-content: flex-end; gap: 24px; align-items: center;
+    }
+    .ucz4_header-top a { color: var(--white); opacity: 0.9; }
+    .ucz4_header-top a:hover { opacity: 1; }
+
+    .ucz4_header-main .ucz4_container {
+      display: flex; align-items: center; justify-content: space-between;
+      padding-top: 12px; padding-bottom: 12px;
+    }
+    .ucz4_logo { height: 52px; }
+    .ucz4_logo-placeholder {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem; font-weight: 700; color: var(--primary);
+      display: flex; align-items: center; gap: 10px;
+    }
+    .ucz4_logo-placeholder .ucz4_dot { width: 10px; height: 10px; background: var(--accent); border-radius: 50%; }
+
+    nav ul { display: flex; gap: 28px; align-items: center; }
+    nav a {
+      font-size: 0.9rem; font-weight: 500; color: var(--text);
+      position: relative; padding: 4px 0; transition: color 0.2s;
+    }
+    nav a::after {
+      content: ''; position: absolute; bottom: -2px; left: 0; width: 0;
+      height: 2px; background: var(--accent); transition: width 0.3s;
+    }
+    nav a:hover { color: var(--primary); }
+    nav a:hover::after { width: 100%; }
+
+    .ucz4_btn-cta {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--accent); color: var(--white);
+      padding: 10px 24px; border-radius: 8px;
+      font-weight: 600; font-size: 0.88rem;
+      transition: background 0.2s, transform 0.2s;
+      border: none; cursor: pointer;
+    }
+    .ucz4_btn-cta:hover { background: var(--accent-light); transform: translateY(-1px); }
+
+    .ucz4_menu-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+    .ucz4_menu-toggle span {
+      display: block; width: 24px; height: 2px; background: var(--primary);
+      margin: 5px 0; transition: 0.3s;
+    }
+
+    /* ── HERO ── */
+    .ucz4_hero {
+      margin-top: 100px;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+      color: var(--white);
+      padding: 80px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .ucz4_hero::after {
+      content: '';
+      position: absolute; top: -50%; right: -20%; width: 600px; height: 600px;
+      background: rgba(232,131,58,0.08); border-radius: 50%;
+    }
+    .ucz4_hero .ucz4_container { display: flex; align-items: center; gap: 60px; position: relative; z-index: 1; }
+    .ucz4_hero-text { flex: 1; }
+    .ucz4_hero-text .ucz4_eyebrow {
+      font-size: 0.82rem; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 2px; color: var(--accent); margin-bottom: 12px;
+    }
+    .ucz4_hero-text h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem; line-height: 1.2; margin-bottom: 20px;
+    }
+    .ucz4_hero-text h1 span { color: var(--accent); }
+    .ucz4_hero-text p { font-size: 1.05rem; opacity: 0.9; margin-bottom: 32px; max-width: 500px; }
+    .ucz4_hero-img {
+      flex: 1; display: flex; justify-content: center;
+    }
+    .ucz4_hero-img-placeholder {
+      width: 100%; max-width: 460px; aspect-ratio: 4/3;
+      background: rgba(255,255,255,0.1);
+      border-radius: var(--radius);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.9rem; opacity: 0.5;
+      border: 2px dashed rgba(255,255,255,0.2);
+    }
+
+    /* ── SECTIONS ── */
+    section { padding: 80px 0; }
+    .ucz4_section-title {
+      text-align: center; margin-bottom: 48px;
+    }
+    .ucz4_section-title .ucz4_eyebrow {
+      font-size: 0.8rem; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 2px; color: var(--accent); margin-bottom: 8px;
+    }
+    .ucz4_section-title h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem; color: var(--primary);
+    }
+
+    /* ── SOBRE ── */
+    .ucz4_about { background: var(--white); }
+    .ucz4_about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+    .ucz4_about-img-placeholder {
+      width: 100%; aspect-ratio: 4/3; background: var(--bg-alt);
+      border-radius: var(--radius); display: flex; align-items: center;
+      justify-content: center; font-size: 0.85rem; color: var(--text-light);
+      border: 2px dashed #D2D6DC;
+    }
+    .ucz4_about-content h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem; color: var(--primary); margin-bottom: 16px;
+    }
+    .ucz4_about-content p { color: var(--text-light); margin-bottom: 16px; }
+
+    /* ── ENSINO ── */
+    .ucz4_ensino { background: var(--bg-alt); }
+    .ucz4_ensino-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+    .ucz4_ensino-card {
+      background: var(--white); border-radius: var(--radius);
+      padding: 36px 28px; box-shadow: var(--shadow);
+      transition: transform 0.3s, box-shadow 0.3s;
+      border-top: 4px solid var(--accent);
+    }
+    .ucz4_ensino-card:hover { transform: translateY(-4px); box-shadow: 0 8px 32px rgba(27,58,92,0.12); }
+    .ucz4_ensino-card .ucz4_icon {
+      width: 52px; height: 52px; background: var(--bg-alt);
+      border-radius: 10px; display: flex; align-items: center;
+      justify-content: center; font-size: 1.4rem; margin-bottom: 16px;
+    }
+    .ucz4_ensino-card h3 { font-size: 1.15rem; color: var(--primary); margin-bottom: 10px; }
+    .ucz4_ensino-card p { font-size: 0.9rem; color: var(--text-light); line-height: 1.6; }
+
+    /* ── ATIVIDADES ── */
+    .ucz4_atividades { background: var(--white); }
+    .ucz4_ativ-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+    .ucz4_ativ-item {
+      background: var(--bg-alt); border-radius: var(--radius);
+      padding: 28px 20px; text-align: center;
+      transition: transform 0.2s, background 0.2s;
+    }
+    .ucz4_ativ-item:hover { transform: translateY(-3px); background: var(--primary); color: var(--white); }
+    .ucz4_ativ-item .ucz4_ativ-icon { font-size: 2rem; margin-bottom: 10px; }
+    .ucz4_ativ-item h4 { font-size: 0.95rem; font-weight: 600; }
+
+    /* ── EVENTOS ── */
+    .ucz4_eventos { background: var(--bg-alt); }
+    .ucz4_eventos-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .ucz4_evento-card {
+      background: var(--white); border-radius: var(--radius); overflow: hidden;
+      box-shadow: var(--shadow); transition: transform 0.2s;
+    }
+    .ucz4_evento-card:hover { transform: translateY(-3px); }
+    .ucz4_evento-img {
+      width: 100%; aspect-ratio: 16/9; background: var(--bg-alt);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--text-light); font-size: 0.85rem;
+    }
+    .ucz4_evento-card h4 { padding: 16px 20px; font-size: 0.95rem; color: var(--primary); }
+
+    /* ── CONTATO ── */
+    .ucz4_contato { background: var(--white); }
+    .ucz4_contato-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+    .ucz4_contato-info { display: flex; flex-direction: column; gap: 24px; }
+    .ucz4_contato-item { display: flex; gap: 16px; align-items: flex-start; }
+    .ucz4_contato-item .ucz4_ci-icon {
+      width: 44px; height: 44px; min-width: 44px;
+      background: var(--bg-alt); border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem;
+    }
+    .ucz4_contato-item h4 { font-size: 0.95rem; color: var(--primary); margin-bottom: 4px; }
+    .ucz4_contato-item p { font-size: 0.88rem; color: var(--text-light); }
+    .ucz4_mapa-placeholder {
+      width: 100%; aspect-ratio: 4/3; background: var(--bg-alt);
+      border-radius: var(--radius); overflow: hidden;
+    }
+    .ucz4_mapa-placeholder iframe { width: 100%; height: 100%; border: 0; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--primary);
+      color: var(--white);
+      padding: 48px 0 0;
+    }
+    .ucz4_footer-grid {
+      display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px;
+      padding-bottom: 36px;
+    }
+    .ucz4_footer-brand p {
+      font-size: 0.88rem; opacity: 0.8; margin-top: 12px; line-height: 1.6;
+    }
+    .ucz4_footer-col h4 {
+      font-size: 0.9rem; font-weight: 600; margin-bottom: 16px;
+      text-transform: uppercase; letter-spacing: 1px; color: var(--accent);
+    }
+    .ucz4_footer-col ul li { margin-bottom: 8px; }
+    .ucz4_footer-col ul li a { font-size: 0.88rem; opacity: 0.8; transition: opacity 0.2s; }
+    .ucz4_footer-col ul li a:hover { opacity: 1; }
+
+    .ucz4_footer-legal {
+      border-top: 1px solid rgba(255,255,255,0.12);
+      padding: 20px 0;
+      font-size: 0.78rem;
+      opacity: 0.7;
+      line-height: 1.8;
+    }
+    .ucz4_footer-legal .ucz4_container {
+      display: flex; flex-direction: column; gap: 4px;
+    }
+    .ucz4_footer-legal-links {
+      display: flex; gap: 20px; margin-top: 4px;
+    }
+    .ucz4_footer-legal-links a {
+      text-decoration: underline; text-underline-offset: 2px;
+    }
+    .ucz4_footer-legal-links a:hover { opacity: 1; }
+
+    /* ── PAGES (Privacidade / Termos) ── */
+    .ucz4_page-overlay {
+      display: none; position: fixed; inset: 0; z-index: 200;
+      background: rgba(0,0,0,0.5);
+    }
+    .ucz4_page-overlay.active { display: flex; justify-content: center; align-items: flex-start; padding: 40px 20px; overflow-y: auto; }
+    .ucz4_page-content {
+      background: var(--white); border-radius: var(--radius);
+      max-width: 800px; width: 100%; padding: 48px;
+      position: relative;
+    }
+    .ucz4_page-content h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem; color: var(--primary); margin-bottom: 24px;
+    }
+    .ucz4_page-content h3 { font-size: 1.1rem; color: var(--primary); margin: 24px 0 8px; }
+    .ucz4_page-content p { font-size: 0.9rem; color: var(--text-light); margin-bottom: 12px; }
+    .ucz4_page-close {
+      position: absolute; top: 16px; right: 20px;
+      background: none; border: none; font-size: 1.6rem;
+      cursor: pointer; color: var(--text-light);
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .ucz4_hero .ucz4_container { flex-direction: column; text-align: center; }
+      .ucz4_hero-text p { margin-left: auto; margin-right: auto; }
+      .ucz4_hero-img { display: none; }
+      .ucz4_hero-text h1 { font-size: 2.2rem; }
+      .ucz4_ensino-cards { grid-template-columns: 1fr; }
+      .ucz4_about-grid { grid-template-columns: 1fr; }
+      .ucz4_ativ-grid { grid-template-columns: repeat(2, 1fr); }
+      .ucz4_eventos-grid { grid-template-columns: 1fr; }
+      .ucz4_contato-grid { grid-template-columns: 1fr; }
+      .ucz4_footer-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 768px) {
+      nav ul.ucz4_nav-links { display: none; }
+      .ucz4_menu-toggle { display: block; }
+      nav ul.ucz4_nav-links.open {
+        display: flex; flex-direction: column;
+        position: absolute; top: 100%; left: 0; right: 0;
+        background: var(--white); padding: 20px 24px;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+      }
+      .ucz4_header-main .ucz4_btn-cta { display: none; }
+      .ucz4_ativ-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 480px) {
+      .ucz4_hero { padding: 60px 0; margin-top: 90px; }
+      .ucz4_hero-text h1 { font-size: 1.8rem; }
+      section { padding: 56px 0; }
+      .ucz4_ativ-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+
+<link rel="canonical" href="https://corevitalityy.online/">
+<meta name="description" content="Visite corevitalityy.online e acesse conteúdo original. Informações detalhadas e atualizadas sobre este assunto.">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://corevitalityy.online/">
+<meta property="og:site_name" content="corevitalityy.online">
+<meta property="og:description" content="Visite corevitalityy.online e acesse conteúdo original. Informações detalhadas e atualizadas sobre este assunto.">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:domain" content="corevitalityy.online">
+<meta name="generator" content="cms-06233f604950">
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Corevitalityy","url":"https://corevitalityy.online/","datePublished":"2024-09-01","dateModified":"2026-11-03","inLanguage":"pt-BR","isPartOf":{"@type":"WebSite","name":"Corevitalityy","url":"https://corevitalityy.online/"},"publisher":{"@type":"Organization","name":"Corevitalityy","url":"https://corevitalityy.online/"}}</script>
+
+<style>:root{--fovk-p:rgb(141,119,228);--fovk-s:rgb(64,226,43);--fovk-id:'4297c37af8e3'}@keyframes hcbqlnjw{from{opacity:1}to{opacity:1}}.zenftj{position:absolute;width:0;height:0;overflow:hidden;pointer-events:none}</style>
+<!-- b:jek47o06b9 v4.73.363 -->
+</head>
+<body data-s="3114a6a7" data-p="t4bnza">
+<noscript><div style="padding:18px;text-align:center;"><p>Este conteúdo de corevitalityy requer JavaScript habilitado para funcionar corretamente.</p></div></noscript>
+
+  <!-- HEADER -->
+  <header>
+    <div class="ucz4_header-top">
+      <div class="ucz4_container">
+        <a href="tel:+556232556300">(62) 3255-6300</a>
+        <a href="mailto:contato@colegioseg.com.br">contato@colegioseg.com.br</a>
+      </div>
+    </div>
+    <div class="ucz4_header-main">
+      <div class="ucz4_container">
+        <a href="#" class="ucz4_logo-placeholder">
+          <span class="ucz4_dot"></span> Colégio SEG
+        </a>
+        <nav>
+          <button class="ucz4_menu-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
+            <span></span><span></span><span></span>
+          </button>
+          <ul class="ucz4_nav-links">
+            <li><a href="#inicio">Home</a></li>
+            <li><a href="#sobre">Nosso Colégio</a></li>
+            <li><a href="#ensino">Ensino</a></li>
+            <li><a href="#atividades">Atividades</a></li>
+            <li><a href="#eventos">Eventos</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </nav>
+        <a href="https://api.whatsapp.com/send/?phone=5562984415007" target="_blank" class="ucz4_btn-cta">Agendar Visita</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="ucz4_hero" id="inicio">
+    <div class="ucz4_container">
+      <div class="ucz4_hero-text">
+        <p class="ucz4_eyebrow">Educação com propósito</p>
+        <h1>Ensino pensado para acompanhar o <span>desenvolvimento</span> de cada estudante</h1>
+        <p>No Colégio SEG, o Ensino Regular e o Integral são pensados para acompanhar de perto o desenvolvimento de cada estudante, oferecendo uma formação completa, humanizada e alinhada às demandas do mundo atual.</p>
+        <a href="#ensino" class="ucz4_btn-cta">Conheça nosso ensino</a>
+      </div>
+      <div class="ucz4_hero-img">
+        <div class="ucz4_hero-img-placeholder">Imagem da fachada do colégio</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section class="ucz4_about" id="sobre">
+    <div class="ucz4_container">
+      <div class="ucz4_about-grid">
+        <div class="ucz4_about-img-placeholder">Imagem do colégio</div>
+        <div class="ucz4_about-content">
+          <p class="ucz4_eyebrow" style="font-size:0.8rem;font-weight:600;text-transform:uppercase;letter-spacing:2px;color:var(--accent);margin-bottom:8px;">Conheça mais</p>
+          <h3>Nosso Colégio</h3>
+          <p>O Colégio SEG atua há anos na formação de crianças e jovens em Goiânia, oferecendo um ambiente acolhedor e estruturado para o desenvolvimento integral dos estudantes.</p>
+          <p>Nossa proposta pedagógica integra formação acadêmica de qualidade com o desenvolvimento socioemocional, preparando alunos para os desafios do mundo contemporâneo com autonomia, pensamento crítico e senso de cidadania.</p>
+          <p>Contamos com instalações próprias no Setor Bueno, equipe pedagógica qualificada e um projeto educacional que valoriza o acompanhamento individualizado de cada estudante.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ENSINO -->
+  <section class="ucz4_ensino" id="ensino">
+    <div class="ucz4_container">
+      <div class="ucz4_section-title">
+        <p class="ucz4_eyebrow">Nosso Ensino</p>
+        <h2>Formação completa em cada etapa</h2>
+      </div>
+      <div class="ucz4_ensino-cards">
+        <div class="ucz4_ensino-card">
+          <div class="ucz4_icon">🎨</div>
+          <h3>Educação Infantil</h3>
+          <p>Nesta fase as crianças estão desenvolvendo sua identidade e dão os primeiros passos rumo à autonomia. O primeiro contato com o ambiente escolar é pensado para ser prazeroso, promovendo socialização, respeito às diferenças e incentivo à tomada de decisões.</p>
+        </div>
+        <div class="ucz4_ensino-card">
+          <div class="ucz4_icon">📖</div>
+          <h3>Ensino Fundamental I</h3>
+          <p>No primeiro ano do Fundamental acontece a alfabetização. O aluno aprende a ler, escrever e dominar o cálculo, além de compreender o ambiente natural e social, o sistema político, as artes e os valores básicos da sociedade e da família.</p>
+        </div>
+        <div class="ucz4_ensino-card">
+          <div class="ucz4_icon">🔬</div>
+          <h3>Ensino Fundamental II</h3>
+          <p>Nesta etapa há uma preocupação com o desenvolvimento integral do aluno. São utilizadas diversas formas de conhecimento para incentivar uma postura crítica, participativa e dialogada, valorizando a pluralidade cultural e o fortalecimento das relações de amizade.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ATIVIDADES EXTRACURRICULARES -->
+  <section class="ucz4_atividades" id="atividades">
+    <div class="ucz4_container">
+      <div class="ucz4_section-title">
+        <p class="ucz4_eyebrow">Além da sala de aula</p>
+        <h2>Atividades Extracurriculares</h2>
+      </div>
+      <div class="ucz4_ativ-grid">
+        <div class="ucz4_ativ-item"><div class="ucz4_ativ-icon">🥋</div><h4>Judô</h4></div>
+        <div class="ucz4_ativ-item"><div class="ucz4_ativ-icon">♟️</div><h4>Xadrez</h4></div>
+        <div class="ucz4_ativ-item"><div class="ucz4_ativ-icon">🪘</div><h4>Capoeira</h4></div>
+        <div class="ucz4_ativ-item"><div class="ucz4_ativ-icon">🍳</div><h4>Culinária</h4></div>
+        <div class="ucz4_ativ-item"><div class="ucz4_ativ-icon">🤖</div><h4>Robótica</h4></div>
+        <div class="ucz4_ativ-item"><div class="ucz4_ativ-icon">💃</div><h4>Dança</h4></div>
+        <div class="ucz4_ativ-item"><div class="ucz4_ativ-icon">🤾</div><h4>Handebol</h4></div>
+        <div class="ucz4_ativ-item"><div class="ucz4_ativ-icon">🏐</div><h4>Voleibol</h4></div>
+        <div class="ucz4_ativ-item"><div class="ucz4_ativ-icon">⚽</div><h4>Futsal</h4></div>
+        <div class="ucz4_ativ-item"><div class="ucz4_ativ-icon">🌍</div><h4>Inglês</h4></div>
+        <div class="ucz4_ativ-item"><div class="ucz4_ativ-icon">🎵</div><h4>Música</h4></div>
+        <div class="ucz4_ativ-item"><div class="ucz4_ativ-icon">📚</div><h4>Reforço Escolar</h4></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EVENTOS -->
+  <section class="ucz4_eventos" id="eventos">
+    <div class="ucz4_container">
+      <div class="ucz4_section-title">
+        <p class="ucz4_eyebrow">Vida escolar</p>
+        <h2>Nossos Eventos</h2>
+      </div>
+      <p style="text-align:center;max-width:700px;margin:-24px auto 40px;color:var(--text-light);font-size:0.95rem;">Os eventos escolares fazem parte da formação integral dos alunos, proporcionando momentos de convivência, troca e construção de vínculos.</p>
+      <div class="ucz4_eventos-grid">
+        <div class="ucz4_evento-card">
+          <div class="ucz4_evento-img">Espetáculo de Final de Ano</div>
+          <h4>Espetáculo de Final de Ano</h4>
+        </div>
+        <div class="ucz4_evento-card">
+          <div class="ucz4_evento-img">Festa Junina</div>
+          <h4>Festa Junina</h4>
+        </div>
+        <div class="ucz4_evento-card">
+          <div class="ucz4_evento-img">Feira Cultural</div>
+          <h4>Feira Cultural</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section class="ucz4_contato" id="contato">
+    <div class="ucz4_container">
+      <div class="ucz4_section-title">
+        <p class="ucz4_eyebrow">Fale conosco</p>
+        <h2>Entre em Contato</h2>
+      </div>
+      <div class="ucz4_contato-grid">
+        <div class="ucz4_contato-info">
+          <div class="ucz4_contato-item">
+            <div class="ucz4_ci-icon">📍</div>
+            <div>
+              <h4>Endereço</h4>
+              <p>Rua T-65, nº 1011, Setor Bueno<br>Goiânia-GO · CEP 74.230-120</p>
+            </div>
+          </div>
+          <div class="ucz4_contato-item">
+            <div class="ucz4_ci-icon">📞</div>
+            <div>
+              <h4>Telefone</h4>
+              <p>(62) 3255-6300<br>(62) 98441-5007</p>
+            </div>
+          </div>
+          <div class="ucz4_contato-item">
+            <div class="ucz4_ci-icon">✉️</div>
+            <div>
+              <h4>E-mail</h4>
+              <p>contato@colegioseg.com.br</p>
+            </div>
+          </div>
+          <div class="ucz4_contato-item">
+            <div class="ucz4_ci-icon">🕐</div>
+            <div>
+              <h4>Horário de Atendimento</h4>
+              <p>Segunda a Sexta: 07h às 18h</p>
+            </div>
+          </div>
+          <a href="https://api.whatsapp.com/send/?phone=5562984415007" target="_blank" class="ucz4_btn-cta" style="align-self:flex-start;margin-top:8px;">Agendar Visita pelo WhatsApp</a>
+        </div>
+        <div class="ucz4_mapa-placeholder">
+          <iframe src="https://maps.google.com/maps?q=Rua%20T-65%2C%20n%C2%BA%201011%2C%20Setor%20Bueno%2C%20Goi%C3%A2nia-GO&t=m&z=15&output=embed&iwloc=near" allowfullscreen loading="lazy"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="ucz4_container">
+      <div class="ucz4_footer-grid">
+        <div class="ucz4_footer-brand">
+          <div class="ucz4_logo-placeholder" style="color:var(--white);">
+            <span class="ucz4_dot"></span> Colégio SEG
+          </div>
+          <p>No Colégio SEG, o Ensino Regular e o Integral são pensados para acompanhar de perto o desenvolvimento de cada estudante, oferecendo uma formação completa e humanizada.</p>
+        </div>
+        <div class="ucz4_footer-col">
+          <h4>Navegação</h4>
+          <ul>
+            <li><a href="#inicio">Home</a></li>
+            <li><a href="#sobre">Nosso Colégio</a></li>
+            <li><a href="#ensino">Ensino</a></li>
+            <li><a href="#atividades">Atividades</a></li>
+            <li><a href="#eventos">Eventos</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </div>
+        <div class="ucz4_footer-col">
+          <h4>Contato</h4>
+          <ul>
+            <li><a href="tel:+556232556300">(62) 3255-6300</a></li>
+            <li><a href="tel:+5562984415007">(62) 98441-5007</a></li>
+            <li><a href="mailto:contato@colegioseg.com.br">contato@colegioseg.com.br</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="ucz4_footer-legal">
+      <div class="ucz4_container">
+        <span>© 2026 Colégio SEG — Todos os direitos reservados</span>
+        <span><strong>SEG SISTEMA EDUCACIONAL DE GOIANIA LTDA</strong> · CNPJ 33.553.330/0001-63</span>
+        <span>Rua T-65, nº 1011, Setor Bueno, Goiânia-GO · CEP 74.230-120</span>
+        <div class="ucz4_footer-legal-links">
+          <a href="#" onclick="event.preventDefault();document.getElementById('privacidade').classList.add('active')">Política de Privacidade</a>
+          <a href="#" onclick="event.preventDefault();document.getElementById('termos').classList.add('active')">Termos de Uso</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- POLÍTICA DE PRIVACIDADE -->
+  <div class="ucz4_page-overlay" id="privacidade" onclick="if(event.target===this)this.classList.remove('active')">
+    <div class="ucz4_page-content">
+      <button class="ucz4_page-close" onclick="document.getElementById('privacidade').classList.remove('active')">&times;</button>
+      <h2>Política de Privacidade</h2>
+      <p><strong>Última atualização:</strong> junho de 2026</p>
+      <p>A <strong>SEG SISTEMA EDUCACIONAL DE GOIANIA LTDA</strong>, inscrita no CNPJ 33.553.330/0001-63, com sede na Rua T-65, nº 1011, Setor Bueno, Goiânia-GO, CEP 74.230-120, é responsável pelo tratamento dos dados pessoais coletados por meio deste site e de seus canais de atendimento.</p>
+
+      <h3>1. Dados coletados</h3>
+      <p>Coletamos dados pessoais fornecidos voluntariamente pelo visitante, como nome, e-mail, telefone e mensagem, quando preenchidos em formulários de contato ou solicitação de visita.</p>
+
+      <h3>2. Finalidade do tratamento</h3>
+      <p>Os dados coletados são utilizados exclusivamente para responder a solicitações de contato, agendar visitas, enviar informações institucionais e gerenciar o relacionamento com famílias e responsáveis.</p>
+
+      <h3>3. Compartilhamento de dados</h3>
+      <p>Não compartilhamos, vendemos ou cedemos dados pessoais a terceiros para fins comerciais. O compartilhamento ocorre apenas quando necessário para cumprimento de obrigação legal ou regulatória.</p>
+
+      <h3>4. Armazenamento e segurança</h3>
+      <p>Os dados são armazenados em ambiente seguro, com controle de acesso restrito à equipe administrativa autorizada. Adotamos medidas técnicas e organizacionais para proteção contra acesso não autorizado, perda ou destruição.</p>
+
+      <h3>5. Direitos do titular</h3>
+      <p>Em conformidade com a Lei Geral de Proteção de Dados (LGPD — Lei nº 13.709/2018), o titular pode solicitar acesso, correção, exclusão ou portabilidade de seus dados pessoais a qualquer momento, por meio do e-mail contato@colegioseg.com.br ou pelo telefone (62) 3255-6300.</p>
+
+      <h3>6. Cookies</h3>
+      <p>Este site pode utilizar cookies para melhorar a experiência de navegação. O visitante pode configurar seu navegador para recusar cookies, sem prejuízo ao acesso ao conteúdo do site.</p>
+
+      <h3>7. Contato</h3>
+      <p>Para dúvidas relacionadas a esta política, entre em contato:<br>
+      E-mail: contato@colegioseg.com.br<br>
+      Telefone: (62) 3255-6300<br>
+      Endereço: Rua T-65, nº 1011, Setor Bueno, Goiânia-GO, CEP 74.230-120</p>
+    </div>
+  </div>
+
+  <!-- TERMOS DE USO -->
+  <div class="ucz4_page-overlay" id="termos" onclick="if(event.target===this)this.classList.remove('active')">
+    <div class="ucz4_page-content">
+      <button class="ucz4_page-close" onclick="document.getElementById('termos').classList.remove('active')">&times;</button>
+      <h2>Termos de Uso</h2>
+      <p><strong>Última atualização:</strong> junho de 2026</p>
+      <p>Este site é mantido pela <strong>SEG SISTEMA EDUCACIONAL DE GOIANIA LTDA</strong>, inscrita no CNPJ 33.553.330/0001-63, com sede na Rua T-65, nº 1011, Setor Bueno, Goiânia-GO, CEP 74.230-120.</p>
+
+      <h3>1. Objetivo do site</h3>
+      <p>Este site tem caráter institucional e informativo, com o objetivo de apresentar o Colégio SEG, seus serviços educacionais, atividades e canais de contato.</p>
+
+      <h3>2. Uso permitido</h3>
+      <p>O conteúdo deste site é destinado a consulta e informação. É proibida a reprodução, distribuição ou modificação do conteúdo sem autorização prévia e por escrito.</p>
+
+      <h3>3. Propriedade intelectual</h3>
+      <p>Todos os textos, imagens, logotipos e demais elementos visuais são de propriedade da SEG SISTEMA EDUCACIONAL DE GOIANIA LTDA ou utilizados sob licença, protegidos pela legislação de direitos autorais.</p>
+
+      <h3>4. Limitação de responsabilidade</h3>
+      <p>As informações publicadas neste site são atualizadas periodicamente, mas podem sofrer alterações sem aviso prévio. O Colégio SEG não se responsabiliza por eventuais imprecisões ou desatualizações.</p>
+
+      <h3>5. Links externos</h3>
+      <p>Este site pode conter links para páginas de terceiros. Não nos responsabilizamos pelo conteúdo, políticas de privacidade ou práticas de sites externos.</p>
+
+      <h3>6. Legislação aplicável</h3>
+      <p>Estes termos são regidos pela legislação brasileira. Eventuais disputas serão submetidas ao foro da comarca de Goiânia-GO.</p>
+
+      <h3>7. Contato</h3>
+      <p>Para dúvidas sobre estes termos:<br>
+      E-mail: contato@colegioseg.com.br<br>
+      Telefone: (62) 3255-6300<br>
+      Endereço: Rua T-65, nº 1011, Setor Bueno, Goiânia-GO, CEP 74.230-120</p>
+    </div>
+  </div>
+
+<footer style="text-align:center;padding:19px 14px;font-size:11px;color:#9a9a9a;margin-top:42px;border-top:1px solid #ebebeb"><p>Conteúdo de Corevitalityy © 2024. Todos os direitos reservados. Proibida a reprodução sem autorização. <a href="https://corevitalityy.online/" style="color:#9a9a9a;text-decoration:none">corevitalityy.online</a></p></footer>
+</body>
+</html>
+
+<!-- 51e5d305665195bd38bcc9be -->
